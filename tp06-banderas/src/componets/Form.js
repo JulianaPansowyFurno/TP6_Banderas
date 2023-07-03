@@ -1,16 +1,13 @@
 import React from 'react';
 import '../index.css';
 
-const Form = ({ onAgregarTarjeta, contenido }) => {
+const Form = ({ respuestaInput }) => {
 
   const manejoSubmit = (e) => {
     e.preventDefault();
     const formulario = new FormData(e.target)
-    const contenido={
-      Nombre: formulario.get('nombre')
-    }
-    onAgregarTarjeta(contenido);
-  
+    const contenido=formulario.get('nombre')
+    respuestaInput(contenido);
   }
   
   return (
