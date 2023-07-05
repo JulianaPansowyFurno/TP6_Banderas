@@ -8,7 +8,7 @@ export default function App(color) {
   const [Paises, setPaises] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const[InputUsuario, setInput] = useState('');
-  var[puntos, setPuntos] = useState(1);
+  var[puntos, setPuntos] = useState(0);
 
   const selectRandomCountry = (Paises) => {
     const randomIndex = Math.floor(Math.random() * Paises.length);
@@ -43,16 +43,14 @@ export default function App(color) {
       if(contenido == selectedCountry.name)
        {
          setPuntos(puntos + 10)
-         
        }
        else
        {
         setPuntos(puntos - 1)
         // <Alert severity="error">No adivinaste, intentalo devuelta</Alert>
          console.log("No es correcto")
-
        }
-       console.log("es correcto y los puntos son: " + puntos)
+       console.log("Es correcto y los puntos son: " + puntos)
        selectRandomCountry(Paises)
     }
 
@@ -62,12 +60,22 @@ export default function App(color) {
     
 
     return (
-      <div  className="tarjeta" style={tarjetaStyle}>
-        <img src={selectedCountry.flag}/>
-        <Form respuestaInput={GuardarRespuestaDelUsuario}/>
-        <h2>Puntos ganados: {puntos}</h2>
+      
+      
+      <div className='container'>
+        <br></br>
+        <br></br>
+        <div  className="tarjeta" style={tarjetaStyle}>
+        <center>
+          <h1> <b>Adivina el nombre del pais</b></h1>
+          <br></br>
+          <h2><b> Puntos: {puntos}</b></h2>
+          <img src={selectedCountry.flag}/>
+          <Form respuestaInput={GuardarRespuestaDelUsuario}/>
+          
+          </center>
+        </div>
       </div>
       
   );
 }
-

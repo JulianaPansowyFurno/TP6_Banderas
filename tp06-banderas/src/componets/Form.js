@@ -14,14 +14,16 @@ const Form = ({ respuestaInput }) => {
     <div>
       <div className="one-half column" id='formSize'>
           <form onSubmit={manejoSubmit}>
-            <label>Adivina el nombre del pais</label>
-              <input type="text" name="nombre" className="u-full-width" placeholder="Nombre del pais"/>
-                <button type="submit" className="u-full-width button-primary">Adivinar</button>
-              </form>
-        </div>
+            <center>
+            <input type="text" name="nombre" className="u-full-width" placeholder="Nombre del pais"/>
+            <br></br>
+            <button  type="submit" className='botonLindo'> <b>Adivinar</b> </button>
+            </center>
+          </form>
+      </div>
     </div>
-
   );
 }
+
 
 export default Form;

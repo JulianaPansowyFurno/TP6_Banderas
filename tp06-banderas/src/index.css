@@ -1,7 +1,15 @@
 body{
-  background-image: linear-gradient(-225deg, #b921d8 0%, #532bc4 52%, #26617c 100%);
-  font-family: 'Delicious Handrawn', cursive;
   font-size: 26px;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: linear-gradient(-225deg, #df43bd 15%, #aa60c0 52%, #8d33b1 90%);
+  min-height: 100%;
+  padding-bottom: 5rem;
+}
+
+.tipografia{
+  font-family: sans-serif;
 }
 
 code {
@@ -11,13 +19,13 @@ code {
 .tarjeta{
   border-radius: 5px;
   padding: 10px;
-  margin-top: 45px;
-  width: 50%;
-  display: flex;
+  margin-top: 50%;
+  width: 70%;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: aliceblue;
   border-radius: 15px;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
 }
 
 .App {
@@ -37,15 +45,55 @@ img{
   text-align: center;
   width: auto;
   border-radius: 10px;
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  /* border-width: 100px;
+  border-color: rgb(92, 92, 92); */
 }
 
 input[type="text"]{
-  height: 30px;
-  width: 350px;
+  height: 50px;
+  width: 500px;
   padding: 6px 10px;
   background-color: #fff;
   border: 1px solid #D1D1D1;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: none;
   box-sizing: border-box;
+  margin-top: 10px;
+}
+
+html {
+  min-height: 100%;
+}
+
+p, h1, h2, h3, h4{
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.botonLindo {
+  display: inline-block;
+  padding: 10px 50px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #093f8f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #2f65b6;
+  margin-top: 10px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #093f8f;
+  box-shadow: 0 5px #2f65b6;
+  transform: translateY(4px);
 }
