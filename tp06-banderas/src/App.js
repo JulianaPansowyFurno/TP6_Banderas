@@ -2,6 +2,9 @@
 import './App.css';
 import { useState, useEffect } from 'react'; 
 import Form from './componets/Form.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function App(color) {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,8 +41,6 @@ export default function App(color) {
     console.log("correcto " + selectedCountry.name)
 
     const GuardarRespuestaDelUsuario = (contenido) => {
-      setInput(contenido)
-      
       if(contenido == selectedCountry.name)
        {
          setPuntos(puntos + 10)
@@ -47,10 +48,8 @@ export default function App(color) {
        else
        {
         setPuntos(puntos - 1)
-        // <Alert severity="error">No adivinaste, intentalo devuelta</Alert>
-         console.log("No es correcto")
-       }
-       console.log("Es correcto y los puntos son: " + puntos)
+        toast.error('No adivinaste, inténtalo de nuevo');
+       }       
        selectRandomCountry(Paises)
     }
 
@@ -63,6 +62,7 @@ export default function App(color) {
       
       
       <div className='container'>
+         <ToastContainer />
         <br></br>
         <br></br>
         <div  className="tarjeta" style={tarjetaStyle}>
@@ -72,7 +72,6 @@ export default function App(color) {
           <h2><b> Puntos: {puntos}</b></h2>
           <img src={selectedCountry.flag}/>
           <Form respuestaInput={GuardarRespuestaDelUsuario}/>
-          
           </center>
         </div>
       </div>
