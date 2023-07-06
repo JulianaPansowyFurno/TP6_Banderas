@@ -23,7 +23,7 @@ const Form = ({ respuestaInput }) => {
       </div>
     </div>
   );
-}
+} 
 
 
 export default Form;

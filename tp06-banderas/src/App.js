@@ -70,7 +70,7 @@ export default function App(color) {
           <h1> <b>Adivina el nombre del pais</b></h1>
           <br></br>
           <h2><b> Puntos: {puntos}</b></h2>
-          <img src={selectedCountry.flag}/>
+          <img src={selectedCountry.flag}/> 
           <Form respuestaInput={GuardarRespuestaDelUsuario}/>
           </center>
         </div>
